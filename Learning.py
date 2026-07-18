@@ -1,51 +1,24 @@
 import numpy as np
-import random
 
-li=[1,2,3,4,5,6]
-print(np.array(li))
+#Numpy Data Types and Type Casting
 
-a=np.arange(10,1,-1) # start stop step
+a=np.array([1,23,5,6,89])
 print(a)
+print(type(a))
+print(type(a[2]))
 
-b=np.linspace(0,1,3) # (start,ending, n-> is n numbers between  start and end)
-print(b)
-
-c=np.logspace(1,3,2) #logrithmetic scale 10^1,10^2,10^3 from this only 2 
-print(c)
-
-d=np.zeros(4) # create a array of zeroes
-print(d)
-
-#Matrix Using Array
-e=np.zeros([2,3])
-print(e)
-
-
-#Array of ones
-a=np.ones([3,4],dtype=str)
+a=np.array([23,12.26,47.02345,3.0254,50])
 print(a)
+print(type(a[1]))
 
-#array of Any one Random Number
-b=np.full(5,7) # (number of value, value)
-print(b)
-
-b=np.full([5,3],9) # (pass Dimension [rows , columns] , Value)
-print(b)
-
-#Empty Array
-a=np.empty([2,3]) #([row , cloums])
+a=np.array([True,False])
 print(a)
+print(type(a[1]))
 
-#Creating Arrays from Random
+a=np.array(["hfhf","apple","choclate","mango"])
+print(a)
+print(type(a[1]))
 
-#random numbers between 0 to 1
-a=np.random.rand(2) # random floats between  0 to 1 , Don't need square bracket and It is Uniformly Distributed
-print(a) 
-
-
-b=np.random.randn(3) # random floats for normal Distribution
-print(b) # mean = 0 and S.D = 1
-
-#array of random integers
-b=np.random.randint(78,9075,size=(2,5)) # start ,stop ,size = (dimension)
-print(b)
+a=np.array([56,"hdvdb",56.12,True,"455"])
+print(a)
+print(type(a[1]))

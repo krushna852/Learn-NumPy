@@ -36,3 +36,7 @@ a=np.array([23.01,56.89,56.99,25.1,69.9999])
 a=a.astype(np.str_)
 print(a)
 
+#type Casting Errors
+a=np.array(["12","56.23","Hello","Welcom"])
+a=a.astype(np.int64)
+print(a) #error 

@@ -1,4 +1,5 @@
 import numpy as np
+import random
 
 li=[1,2,3,4,5,6]
 print(np.array(li))
@@ -34,3 +35,17 @@ print(b)
 #Empty Array
 a=np.empty([2,3]) #([row , cloums])
 print(a)
+
+#Creating Arrays from Random
+
+#random numbers between 0 to 1
+a=np.random.rand(2) # random floats between  0 to 1 , Don't need square bracket and It is Uniformly Distributed
+print(a) 
+
+
+b=np.random.randn(3) # random floats for normal Distribution
+print(b) # mean = 0 and S.D = 1
+
+#array of random integers
+b=np.random.randint(78,9075,size=(2,5)) # start ,stop ,size = (dimension)
+print(b)

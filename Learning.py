@@ -1,32 +1,27 @@
-#Array Reshaping
+#Arthemetic Operations on  1D Array
 
 import numpy as np
 
-a=np.arange(1,7)
-re=a.reshape(2,3)
-print(re)
+a=np.array([1,2,3])  # a1 a2 a3
+b=np.array([4,5,6])  # b1 b2 b3
 
-re2=re.reshape(3,2)
-print(re2)
+#Addition -> a1+b1 a2+b2 a3+b3
+print(a+b)
 
+#Subtraction -> a1-b1 a2-b2 a3-b3
+print(a-b)
 
-# ravel -> convert to 1D array
+#Division -> a1/b1 a2/b2 a3/b3
+print(a/b)
 
-re3=re2.ravel()
-print(re3)
+#Multiplycation -> a1*b1 a2*b2 a3*b3
+print(a*b)
 
-# flatten -> convert to 1D array
-re4=re2.flatten()
-print(re4)
+#Floor Divison 
+print(b//a)
 
-#Differnce Between ravel And flatten
+#Modulus
+print(b%a)
 
-re4[0]=5
-print(re2) # flatten returns a copy of an array so changes not reflect in main array
-print(re4)
-
-
-
-re3[0]=5
-print(re2) # ravel returns a view of an array changes it that array changes into main array
-print(re3)
+#power
+print(a**2)

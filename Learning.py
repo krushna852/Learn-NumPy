@@ -1,27 +1,14 @@
-#Arthemetic Operations on  1D Array
+import numpy as np 
 
-import numpy as np
+#Universal Functions 
 
-a=np.array([1,2,3])  # a1 a2 a3
-b=np.array([4,5,6])  # b1 b2 b3
+#1. Square root
+a=np.array([1,4,9,16,25])
+print(np.sqrt(a))  # it returns float
 
-#Addition -> a1+b1 a2+b2 a3+b3
-print(a+b)
+#2.Exponential -> n.exp -> e^x
+print(np.exp([5,1,3]))
 
-#Subtraction -> a1-b1 a2-b2 a3-b3
-print(a-b)
-
-#Division -> a1/b1 a2/b2 a3/b3
-print(a/b)
-
-#Multiplycation -> a1*b1 a2*b2 a3*b3
-print(a*b)
-
-#Floor Divison 
-print(b//a)
-
-#Modulus
-print(b%a)
-
-#power
-print(a**2)
+#3.Sine Fun -> np.sin
+ang=np.array([0,np.pi,np.pi/2])
+print(np.sin(ang))

@@ -1,14 +1,18 @@
 import numpy as np 
 
-#Universal Functions 
+#Indexing And Slicing
 
-#1. Square root
-a=np.array([1,4,9,16,25])
-print(np.sqrt(a))  # it returns float
+arr=np.arange(1,7)
 
-#2.Exponential -> n.exp -> e^x
-print(np.exp([5,1,3]))
+print(arr[0]) # +ve indexing
+print(arr[2])
 
-#3.Sine Fun -> np.sin
-ang=np.array([0,np.pi,np.pi/2])
-print(np.sin(ang))
+print(arr[-1])  # -ve indexing
+print(arr[-3])
+
+#slicing
+print(arr[0:4]) #start : end (explicit) : step
+print(arr[::-1]) # reverse a array
+
+print(arr[-4:-1])
+print(arr[-1:-4:-1])

@@ -1,14 +1,21 @@
-import numpy as np 
+import numpy as np
 
-#Multidimensoinal Slicing
 
-matrix=np.arange(1,10).reshape(3,3)
-print(matrix)
+#Index Arrays
 
-print(matrix[0:2 , 0:3])  # [rows (start:end:step) , columns (start:end:step)]
-print(matrix[1: , :])
+#1. np.take ( array , list of index)
 
-print(matrix[1,1:3])
+a=np.arange(1,11)
+ind=[0,5]
+print(np.take(a,ind))
 
-print(matrix[1:3, 1:3])
+#Iterating with np.nditer : for looping through array
+arr=np.array([[1,2],[2,3]])
 
+for i in np.nditer(arr):
+    print(i,end=" ")
+print("\n")
+#Iterating with ndenumerate : it returns both index and value
+
+for ind , i in np.ndenumerate(arr):
+    print(ind,i)

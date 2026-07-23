@@ -1,18 +1,14 @@
 import numpy as np 
 
-#Indexing And Slicing
+#Multidimensoinal Slicing
 
-arr=np.arange(1,7)
+matrix=np.arange(1,10).reshape(3,3)
+print(matrix)
 
-print(arr[0]) # +ve indexing
-print(arr[2])
+print(matrix[0:2 , 0:3])  # [rows (start:end:step) , columns (start:end:step)]
+print(matrix[1: , :])
 
-print(arr[-1])  # -ve indexing
-print(arr[-3])
+print(matrix[1,1:3])
 
-#slicing
-print(arr[0:4]) #start : end (explicit) : step
-print(arr[::-1]) # reverse a array
+print(matrix[1:3, 1:3])
 
-print(arr[-4:-1])
-print(arr[-1:-4:-1])

@@ -1,20 +1,18 @@
 import numpy as np
 
+#Transpose Of Matrix
 
-#Views vs Copies
+arr=np.arange(1,10).reshape(3,3)
+print(arr)
 
-#View :-
-arr=np.array([1,2,3,4,5,6])
-view=arr[1:4]
-print(view)
+print(arr.transpose())
 
-view[1]= 4
-print(view)
-print(arr) #changes in view aslo reflect in orignal array
+#Swapaxes :- swap 2 specific axes
 
-#Copy :-
+arr=np.array([[[1,5,6],[5,9,6]]])
+print(arr)
+print(arr.shape)  # (1,2,3) swap 0th axes with 1st 1 <-> 2
 
-cop=arr[1:4].copy()
-cop[1]=3
-print(cop)
-print(arr) # Changes Not affect orignal array
+swap=np.swapaxes(arr,0,1)
+print(swap.shape)
+print(swap)

@@ -1,18 +1,23 @@
 import numpy as np
 
-#Transpose Of Matrix
+#Concatination
 
-arr=np.arange(1,10).reshape(3,3)
-print(arr)
+a=np.array([1,2])
+b=np.array([3,4])
 
-print(arr.transpose())
+c=np.concatenate((a,b))
+print(c)
 
-#Swapaxes :- swap 2 specific axes
+#Using vstack :-  vertical stacking (concatinate by adding rows)
 
-arr=np.array([[[1,5,6],[5,9,6]]])
-print(arr)
-print(arr.shape)  # (1,2,3) swap 0th axes with 1st 1 <-> 2
+arr1=np.array([[1,2],[3,4]])
+arr2=np.array([[5,6],[7,8]])
+print(np.vstack((arr1,arr2)))
 
-swap=np.swapaxes(arr,0,1)
-print(swap.shape)
-print(swap)
+#Using hstack :- horizontal stacking (concatinate by adding columns)
+
+print(np.hstack((arr1,arr2)))
+
+#Only stack
+
+print(np.stack((arr1,arr2),axis=0)) # 0 -> rows ,1-> columns

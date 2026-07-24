@@ -1,21 +1,20 @@
 import numpy as np
 
 
-#Index Arrays
+#Views vs Copies
 
-#1. np.take ( array , list of index)
+#View :-
+arr=np.array([1,2,3,4,5,6])
+view=arr[1:4]
+print(view)
 
-a=np.arange(1,11)
-ind=[0,5]
-print(np.take(a,ind))
+view[1]= 4
+print(view)
+print(arr) #changes in view aslo reflect in orignal array
 
-#Iterating with np.nditer : for looping through array
-arr=np.array([[1,2],[2,3]])
+#Copy :-
 
-for i in np.nditer(arr):
-    print(i,end=" ")
-print("\n")
-#Iterating with ndenumerate : it returns both index and value
-
-for ind , i in np.ndenumerate(arr):
-    print(ind,i)
+cop=arr[1:4].copy()
+cop[1]=3
+print(cop)
+print(arr) # Changes Not affect orignal array

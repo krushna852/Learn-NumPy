@@ -24,6 +24,17 @@ def Matrix_multi(a,b):
         return "Multiplication is not possible"
 
 
+def trans(a):
+    li=[]
+    i=0
+    while i< a.shape[1]:
+        j=0
+        while j < a.shape[0]:
+            li.append(a[j][i])
+            j+=1
+        i+=1
+    return np.array(li).reshape(a.shape[1],a.shape[0])
+
 a=np.arange(1,7)
 a1=a.flatten().reshape(2,3)
 a2=a.flatten().reshape(3,2)
@@ -35,3 +46,7 @@ c=np.arange(1,16).reshape(5,3)
 d=np.arange(1,13).reshape(3,4)
 result=Matrix_multi(c,d)
 print(result)
+
+a3=np.arange(1,7).reshape(2,3)
+print(a3)
+print(trans(a3))

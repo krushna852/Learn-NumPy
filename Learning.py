@@ -1,23 +1,19 @@
 import numpy as np
 
-#Concatination
+#Remark np.info and .nbytes
 
-a=np.array([1,2])
-b=np.array([3,4])
+a=np.arange(1,10)
+print(a.nbytes) # it returns memory of an array
+print(a.itemsize)
 
-c=np.concatenate((a,b))
-print(c)
+print(np.info(np.astype)) # it returns documentation or information 
 
-#Using vstack :-  vertical stacking (concatinate by adding rows)
+# Spliting Of an Array
 
-arr1=np.array([[1,2],[3,4]])
-arr2=np.array([[5,6],[7,8]])
-print(np.vstack((arr1,arr2)))
+arr=np.arange(1,9)
+print(np.split(arr,2)) # if equal divison
 
-#Using hstack :- horizontal stacking (concatinate by adding columns)
+print(np.hsplit(arr,4)) # splits horizontally
 
-print(np.hstack((arr1,arr2)))
-
-#Only stack
-
-print(np.stack((arr1,arr2),axis=0)) # 0 -> rows ,1-> columns
+a=np.arange(1,10).reshape(3,3)
+print(np.vsplit(a,3))  # splits vertically only above 2 or 2d array

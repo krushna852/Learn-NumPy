@@ -1,33 +1,32 @@
 import numpy as np
 
-#Aggregate Functions
+#comulative Operations -> running oprtsions
 
-#For 1D Array
+arr=np.array([1,2,3])
 
-a=np.arange(1,10)
+print(np.cumsum(arr))
 
-print(np.sum(a))
+print(np.cumprod(arr)) 
 
-print(np.mean(a))
+#Conditional Based Choices 
 
-print(np.median(a))
+choice=np.where(arr%2==0,"even","odd")
+print(choice)
 
-print(np.var(a))
+a=np.arange(1,11)
+print(np.argwhere(a%2==0))  # It returns index of element
 
-print(np.std(a))
-
-print(np.min(a))
-
-print(np.max(a))
+result=np.logical_and(a<5,a%2==0)
+print(result) # it returns True and False
 
 #for 2D Array
 
-a=a.reshape(3,3)
+matrix=np.arange(1,10).reshape(3,3)
+print(np.argwhere(matrix<5))
+print(np.where(matrix%2==0,-1,0))
 
-print(a)
+res=np.logical_and(matrix%2==0, matrix > 3)
+print(matrix[res])
 
-print(np.sum(a,axis =0)) # sum of all elements in Single column
-
-print(np.sum(a, axis=1)) #sum all elements in single row
-
-print(np.min(a))
+res=np.logical_or(matrix !=4,matrix<4)
+print(matrix[res])

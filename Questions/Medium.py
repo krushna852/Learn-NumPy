@@ -78,3 +78,41 @@ print(a)
 
 a=np.random.randint(1,101,size=10)
 print(a)
+
+#11.Create a 3×3 array of random integers and sort it row-wise
+
+a=np.random.randint(1,100,size=[3,3])
+print(a)
+a=np.sort(a,axis=0)
+print(a)
+
+#12.Shuffle an array randomly
+
+np.random.shuffle(a)
+print(a)
+
+#13.Create a 5×5 2D array with 1s on the border and 0s inside.
+
+z=np.zeros([5,5])
+z[0]=1
+z[:,0]=1
+z[:,-1]=1
+z[-1]=1
+print(z)
+z=np.ones([5,5])
+z[1:-1,1:-1]=0
+print(z)
+
+#14.Check if an array contains any NaN values.
+
+a = np.array([1, 2, np.nan, 4, 5])
+print(np.isnan(a).any())
+
+#15.Sort the rows of a 2D array based on the values of the second column
+
+arr = np.array([[8, 11, 1],
+                [5, 2, 7],
+                [6, 9, 3]])
+
+sorted=arr[:,1].argsort()
+print(arr[sorted])

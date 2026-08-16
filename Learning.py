@@ -1,11 +1,12 @@
 import numpy as np
 
-#Broadcasting
 
-image=np.array([[150,950],[400,250]])
-brightness=image+50 #here 50 is consider as (2,2) array with all value 50
-print(brightness)
+#Vectorization
 
-a=np.array([[1],[2],[3]])
-b=np.array([1,2,3])
-print(a*b)
+def square(x):
+    return x*x
+
+squarev=np.vectorize(square)  # it Convert normsl function into numpy function
+
+a=np.array([1,2,3,4,5,6])
+print(squarev(a))

@@ -116,3 +116,56 @@ arr = np.array([[8, 11, 1],
 
 sorted=arr[:,1].argsort()
 print(arr[sorted])
+
+#16 Insert Elements in an Array
+
+
+a=np.arange(1,11).astype(np.float64)
+b=np.insert(a,[3,5],[np.nan,np.inf])
+print(b)
+b=np.logical_or(np.isnan(b).any(),np.isinf(b).any())
+print(b)
+
+
+#17.Flatten a multi-dimensional NumPy array
+
+a=np.arange(1,10).reshape(3,3)
+new = a.flatten()
+print(new)
+
+#18.Stack two arrays vertically and horizontally
+
+a = np.array([1, 2, 3])
+b = np.array([4, 5, 6])
+
+c=np.vstack((a,b))
+print(c)
+
+c=np.hstack((a,b))
+print(c)
+
+#19.Split an array into 3 equal parts
+
+a=np.arange(1,13)
+print(np.split(a,3))
+
+a=np.arange(1,10).reshape(3,3)
+print(np.hsplit(a,3))
+
+#20.Perform Addition and Squaring on Arrays
+
+arrayOne = np.array([[5, 6, 9], [21, 18, 27]])
+arrayTwo = np.array([[15, 33, 24], [4, 7, 1]])
+
+add=arrayOne+arrayTwo
+print(add)
+
+square=add**2
+print(square)
+
+#21.Invert a matrix
+
+matrix=np.array([2,9,9,6,5,3,7,8,99]).reshape(3,3)
+print(matrix)
+inv_matrix=np.linalg.inv(matrix)
+print(inv_matrix)
